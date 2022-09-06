@@ -39,15 +39,7 @@ var PublicFlags = []cli.Flag{
 	&cli.BoolFlag{Name: "linenumbers", Aliases: []string{"l"},
 		Usage: "输出加上一列行号"},
 	&cli.BoolFlag{Name: "zero", Usage: "行号以0为基数开始(缺省为1)"},
-	&cli.GenericFlag{
-		Name:    "format",
-		Aliases: []string{"f"},
-		Value: &EnumValue{
-			Enum: []string{"csv", "dbf", "fixed", "geojson", "json",
-				"ndjson", "xls", "xlsx"},
-		},
-		Usage: "输入CSV文件的的格式.如果不指定将会以文件类型自动识别",
-	},
+
 	&cli.StringFlag{Name: "schema", Aliases: []string{"s"},
 		Usage: "指定CSV格式schema"},
 	&cli.StringFlag{Name: "key", Aliases: []string{"k"},
@@ -56,9 +48,9 @@ var PublicFlags = []cli.Flag{
 	&cli.StringFlag{Name: "write-sheets",
 		Usage: "写入文件的Sheet名,-标识写入所有Sheet",
 		Value: "-"},
-	&cli.StringFlag{Name: "encoding-xls", Usage: "指定XLS文件的编码"},
+	&cli.StringFlag{Name: "encoding-xls", Usage: "指定XLS文件的`编码`"},
 	&cli.Int64Flag{Name: "snifflimit", Aliases: []string{"y"},
 		Usage: "将CSVdialect `sniffing`限制为指定字节数(0关闭-1整个文件)"},
-	&cli.BoolFlag{Name: "no-intference", Aliases: []string{"I"},
+	&cli.BoolFlag{Name: "no-inference", Aliases: []string{"I"},
 		Usage: "解析CSV输入时禁用类型推断(和--locale, --date-format, --datetime-format)"},
 }
