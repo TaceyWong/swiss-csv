@@ -4,10 +4,10 @@ go 1.18
 
 require (
 	github.com/gizak/termui/v3 v3.1.0
-	github.com/go-echarts/go-echarts/v2 v2.2.4
 	github.com/mitchellh/colorstring v0.0.0-20190213212951-d06e56a500db
 	github.com/shirou/gopsutil/v3 v3.22.8
 	github.com/urfave/cli/v2 v2.14.1
+	"github.com/go-echarts/go-echarts/v2"
 )
 
 require (
