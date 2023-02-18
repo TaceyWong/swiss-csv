@@ -4,7 +4,6 @@ import (
 	"log"
 	"math/rand"
 	"os"
-	"scsv"
 	"scsv/cmd"
 
 	"github.com/go-echarts/go-echarts/v2/charts"
@@ -16,6 +15,7 @@ import (
 	"github.com/gizak/termui/v3/widgets"
 )
 
+// https://github.com/vdobler/chart
 var CSVStatCMD = &cli.Command{}
 
 func init() {
@@ -50,9 +50,10 @@ func init() {
 }
 
 func CSVStatAction(ctx *cli.Context) error {
-	scsv.GetSysMemSize()
-	BarDemo()
-	EChartDemo()
+	// scsv.GetSysMemSize()
+	StatAll()
+	// BarDemo()
+	// EChartDemo()
 	return nil
 }
 
